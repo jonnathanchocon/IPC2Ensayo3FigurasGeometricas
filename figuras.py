@@ -104,5 +104,5 @@ class Circulo(FiguraGeometrica):
     def definir_datos(self):  # Implementacion del metodo abstracto
         try:
             self.radio = float(input('Ingrese el radio: '))
-        except ValueError:
-            print('Error en la entrada de datos: ', ValueError.message)
+        except Exception:
+            print('Error en la entrada de datos')
