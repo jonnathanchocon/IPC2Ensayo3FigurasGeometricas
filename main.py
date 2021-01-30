@@ -48,11 +48,11 @@ def main():  # metodo principal
         elif opcion == 3:  # Triangulo
             triangulo = figuras.Triangulo()
             triangulo.definir_datos()
-            print(f'Área: {str(triangulo.getArea())}')
-            print(f'Perímetro: {str(triangulo.getPerimetro())}')
+            print(f'Área: {str(triangulo.get_area())}')
+            print(f'Perímetro: {str(triangulo.get_perimetro())}')
 
-            suma_area += triangulo.getArea()
-            suma_perimetro += triangulo.getPerimetro()
+            suma_area += triangulo.get_area()
+            suma_perimetro += triangulo.get_perimetro()
             numero_figuras += 1
 
         elif opcion == 4:  # Circulo
@@ -67,7 +67,7 @@ def main():  # metodo principal
 
         elif opcion == 5:
             if numero_figuras == 1:
-                print(f'Se ingresaron {str(numero_figuras)} figura')
+                print(f'Se ingresó {str(numero_figuras)} figura')
                 print(
                     'Sumatoria de áreas: ',
                     f'{str(round(suma_area, 2))}'
