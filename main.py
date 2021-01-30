@@ -28,21 +28,21 @@ def main():  # metodo principal
         if opcion == 1:  # Cuadrado
             cuadrado = figuras.Cuadrado()
             cuadrado.definir_datos()
-            print(f'Área: {str(cuadrado.getArea())}')
-            print(f'Perímetro: {str(cuadrado.getPerimetro())}')
+            print(f'Área: {str(cuadrado.get_area())}')
+            print(f'Perímetro: {str(cuadrado.get_perimetro())}')
 
-            suma_area += cuadrado.getArea()
-            suma_perimetro += cuadrado.getPerimetro()
+            suma_area += cuadrado.get_area()
+            suma_perimetro += cuadrado.get_perimetro()
             numero_figuras += 1
 
         elif opcion == 2:  # Rectangulo
             rectangulo = figuras.Rectangulo()
             rectangulo.definir_datos()
-            print(f'Área: {str(rectangulo.getArea())}')
-            print(f'Perímetro: {str(rectangulo.getPerimetro())}')
+            print(f'Área: {str(rectangulo.get_area())}')
+            print(f'Perímetro: {str(rectangulo.get_perimetro())}')
 
-            suma_area += rectangulo.getArea()
-            suma_perimetro += rectangulo.getPerimetro()
+            suma_area += rectangulo.get_area()
+            suma_perimetro += rectangulo.get_perimetro()
             numero_figuras += 1
 
         elif opcion == 3:  # Triangulo
@@ -58,34 +58,34 @@ def main():  # metodo principal
         elif opcion == 4:  # Circulo
             circulo = figuras.Circulo()
             circulo.definir_datos()
-            print(f'Área: {str(circulo.getArea())}')
-            print(f'Perímetro: {str(circulo.getPerimetro())}')
+            print(f'Área: {str(circulo.get_area())}')
+            print(f'Perímetro: {str(circulo.get_perimetro())}')
 
-            suma_area += circulo.getArea()
-            suma_perimetro += circulo.getPerimetro()
+            suma_area += circulo.get_area()
+            suma_perimetro += circulo.get_perimetro()
             numero_figuras += 1
 
         elif opcion == 5:
             if numero_figuras == 1:
                 print(f'Se ingresaron {str(numero_figuras)} figura')
                 print(
-                    'Promedio de áreas: ',
-                    f'{str(round(suma_area/numero_figuras, 2))}'
+                    'Sumatoria de áreas: ',
+                    f'{str(round(suma_area, 2))}'
                 )
                 print(
-                    'Promedio de perímetros: ',
-                    f'{str(round(suma_perimetro/numero_figuras, 2))}'
+                    'Sumatoria de perímetros: ',
+                    f'{str(round(suma_perimetro, 2))}'
                 )
 
             elif numero_figuras > 1:
                 print(f'Se ingresaron {str(numero_figuras)} figuras')
                 print(
-                    'Promedio de áreas: ',
-                    f'{str(round(suma_area / numero_figuras, 2))}'
+                    'Sumatoria de áreas: ',
+                    f'{str(round(suma_area, 2))}'
                 )
                 print(
-                    'Promedio de perímetros: ',
-                    f'{str(round(suma_perimetro / numero_figuras, 2))}'
+                    'Sumatoria de perímetros: ',
+                    f'{str(round(suma_perimetro, 2))}'
                 )
 
             print('Aplicación Finalizada')

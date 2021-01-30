@@ -6,11 +6,11 @@ from math import sqrt, pi
 class FiguraGeometrica(ABC):
 
     @abstractmethod
-    def getPerimetro(self):  # Metodo abstracto
+    def get_perimetro(self):  # Metodo abstracto
         pass
 
     @abstractmethod
-    def getArea(self):  # Metodo abstracto
+    def get_area(self):  # Metodo abstracto
         pass
 
     @abstractmethod
@@ -23,11 +23,11 @@ class Cuadrado(FiguraGeometrica):
     def __init__(self):  # Constructor
         self.lado = 0
 
-    def getPerimetro(self):  # Implementacion del metodo abstracto
+    def get_perimetro(self):  # Implementacion del metodo abstracto
         # super().getPerimetro()
         return round(4 * self.lado, 2)
 
-    def getArea(self):  # Implementacion del metodo abstracto
+    def get_area(self):  # Implementacion del metodo abstracto
         # super().getArea()
         return round(self.lado * self.lado, 2)
 
@@ -44,10 +44,10 @@ class Rectangulo(FiguraGeometrica):
         self.base = 0
         self.altura = 0
 
-    def getPerimetro(self):  # Implementacion del metodo abstracto
+    def get_perimetro(self):  # Implementacion del metodo abstracto
         return round(2 * self.base + 2 * self.altura, 2)
 
-    def getArea(self):  # Implementacion del metodo abstracto
+    def get_area(self):  # Implementacion del metodo abstracto
         return round(self.base * self.altura, 2)
 
     def definir_datos(self):  # Implementacion del metodo abstracto
@@ -65,19 +65,14 @@ class Triangulo(FiguraGeometrica):
         self.ladoB = 0
         self.ladoC = 0
 
-    def getPerimetro(self):  # Implementacion del metodo abstracto
+    def get_perimetro(self):  # Implementacion del metodo abstracto
         if self.ladoA > 0 and self.ladoB > 0 and self.ladoC > 0:
             return round(self.ladoA + self.ladoB + self.ladoC, 2)
         else:
             return 0
 
-    def getArea(self):  # Implementacion del metodo abstracto
+    def get_area(self):  # Implementacion del metodo abstracto
         if self.ladoA > 0 and self.ladoB > 0 and self.ladoC > 0:
-            # return round(
-            #     (self.ladoC * sqrt(self.ladoA**2 - ((
-            #         self.ladoA**2
-            #         - self.ladoB**2
-            #         + self.ladoC**2)/(2*self.ladoC))**2))/2, 2)
             s = (self.ladoA + self.ladoB + self.ladoC) / 2
             a = self.ladoA
             b = self.ladoB
@@ -102,10 +97,10 @@ class Circulo(FiguraGeometrica):
     def __init__(self):  # Constructor
         self.radio = 0
 
-    def getPerimetro(self):  # Implementacion del metodo abstracto
+    def get_perimetro(self):  # Implementacion del metodo abstracto
         return round(2*pi*self.radio, 2)
 
-    def getArea(self):  # Implementacion del metodo abstracto
+    def get_area(self):  # Implementacion del metodo abstracto
         return round(pi * self.radio**2, 2)
 
     def definir_datos(self):  # Implementacion del metodo abstracto
