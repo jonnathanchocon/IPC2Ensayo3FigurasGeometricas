@@ -4,9 +4,9 @@ import figuras
 def menu():  # muestra el menu de opciones
     print('Figuras Geométricas')
     print('1. Cuadrado')
-    print('2. Rectangulo')
-    print('3. Triangulo')
-    print('4. Circulo')
+    print('2. Rectángulo')
+    print('3. Triángulo')
+    print('4. Círculo')
     print('5. Salir')
     print('Elija una opción')
 

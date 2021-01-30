@@ -24,11 +24,9 @@ class Cuadrado(FiguraGeometrica):
         self.lado = 0
 
     def get_perimetro(self):  # Implementacion del metodo abstracto
-        # super().getPerimetro()
         return round(4 * self.lado, 2)
 
     def get_area(self):  # Implementacion del metodo abstracto
-        # super().getArea()
         return round(self.lado * self.lado, 2)
 
     def definir_datos(self):  # Implementacion del metodo abstracto
